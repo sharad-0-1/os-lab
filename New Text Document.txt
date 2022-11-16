@@ -1,6 +1,75 @@
 # os-lab
 
 
+#even odd
+read -p "Enter a number: " number
+if [ $((number%2)) -eq 0 ]
+then
+  echo "Number is even."
+else
+  echo "Number is odd."
+fi
+
+
+#factorial
+num=5
+factorial=1
+ 
+counter=$num
+ 
+while [[ $counter -gt 0 ]]; do
+   factorial=$(( $factorial * $counter ))
+   counter=$(( $counter - 1 ))
+done
+ 
+echo $factorial
+
+
+
+
+#fibonacci
+N=6
+# Fibonacci Series
+a=0
+b=1
+echo "The Fibonacci series is : "
+for (( i=0; i<N; i++ ))
+do
+    echo -n "$a "
+    fn=$((a + b))
+    a=$b
+    b=$fn
+done
+
+
+
+#switch
+echo -n "Enter the name of a country: "
+read COUNTRY
+
+echo -n "The official language of $COUNTRY is "
+
+case $COUNTRY in
+
+  Lithuania)
+    echo -n "Lithuanian"
+    ;;
+
+  Romania | Moldova)
+    echo -n "Romanian"
+    ;;
+
+  Italy | "San Marino" | Switzerland | "Vatican City")
+    echo -n "Italian"
+    ;;
+
+  *)
+    echo -n "unknown"
+    ;;
+esac
+
+
+
 #priority
 using namespace std;
 struct Process{
